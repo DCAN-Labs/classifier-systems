@@ -23,5 +23,14 @@ class Woods1(Environment):
                         i += 1
                     break
 
+    def set_current_position(self, starting_position):
+        self.world[starting_position[0]][starting_position[1]] = '*'
+
+    def get_width(self):
+        return self.width
+
+    def get_height(self):
+        return self.height
+
     def pay_off(self, action_set):
         pass

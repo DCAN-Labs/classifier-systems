@@ -3,7 +3,7 @@ from unittest import TestCase
 from src.environments.woods1 import Woods1
 
 from src.classifiers.zeroth_level_classifier_system import ZerothLevelClassifierSystem
-from detectors.woods1_detector import Woods1Detector
+from src.detectors.woods1_detector import Woods1Detector
 
 
 class TestZerothLevelClassifierSystem(TestCase):
