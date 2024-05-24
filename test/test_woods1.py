@@ -1,6 +1,6 @@
 import unittest
 
-from woods1 import Woods1
+from woods1.woods1 import Woods1
 
 
 class TestWoods1Methods(unittest.TestCase):
