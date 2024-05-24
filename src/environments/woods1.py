@@ -1,4 +1,4 @@
-from environment import Environment
+from src.environments.environment import Environment
 
 
 class Woods1(Environment):
