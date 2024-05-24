@@ -1,3 +1,6 @@
+import pandas as pd
+
+
 class ZerothLevelClassifierSystem:
     def __init__(self, environment, classifiers_file, detector):
         self.environment = environment
@@ -16,5 +19,8 @@ class ZerothLevelClassifierSystem:
 
         return old_action_set
 
-    def get_classifiers(self, classifiers_file):
-        pass
+    @staticmethod
+    def get_classifiers(classifiers_file):
+        df = pd.read_csv(classifiers_file, sep=':', names=['condition', 'message', 'strength'], dtype={'message': str})
+
+        return df
