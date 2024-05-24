@@ -1,5 +1,11 @@
 import pandas as pd
 
+from src.classifiers.classifier import Classifier
+
+
+def get_classifier(row):
+    return Classifier(row['condition'], row['message'], row['strength'])
+
 
 class ZerothLevelClassifierSystem:
     def __init__(self, environment, classifiers_file, detector):
@@ -22,5 +28,6 @@ class ZerothLevelClassifierSystem:
     @staticmethod
     def get_classifiers(classifiers_file):
         df = pd.read_csv(classifiers_file, sep=':', names=['condition', 'message', 'strength'], dtype={'message': str})
+        df['classifier'] = df.apply(get_classifier, axis=1)
 
-        return df
+        return df['classifier'].tolist()
