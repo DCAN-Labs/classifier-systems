@@ -14,5 +14,7 @@ class ZerothLevelClassifierSystem:
         action_set = highest_bidders.get_action_set()
         old_action_set = old_action_set.pay_highest_bidders(action_set)
 
+        return old_action_set
+
     def get_classifiers(self, classifiers_file):
         pass
