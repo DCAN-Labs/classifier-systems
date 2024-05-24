@@ -12,18 +12,14 @@ class Woods1(Environment):
                     continue
                 else:
                     parts = line.split()
-                    print(f'parts: {parts}')
                     self.width = int(parts[0])
                     self.height = int(parts[1])
-                    self.world = [["" for i in range(self.width)] for j in range(self.height)]
-                    print(f'world: {self.world}')
+                    self.world = [["" for i in range(self.width)] for _ in range(self.height)]
                     i += 2
                     for row in range(self.height):
                         line = lines[i]
-                        print(f'line: {line}')
                         for col in range(self.width):
                             self.world[row][col] = line[col]
                         i += 1
-                    print(f'self.world: {self.world}')
                     break
 
