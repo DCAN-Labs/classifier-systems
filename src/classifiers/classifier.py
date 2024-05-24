@@ -3,3 +3,6 @@ class Classifier:
         self.condition = condition
         self.action = action
         self.strength = strength
+
+    def matches(self, environment_state):
+        pass

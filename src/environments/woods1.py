@@ -23,3 +23,5 @@ class Woods1(Environment):
                         i += 1
                     break
 
+    def pay_off(self, action_set):
+        pass
