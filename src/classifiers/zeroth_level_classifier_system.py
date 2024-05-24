@@ -11,7 +11,7 @@ class ZerothLevelClassifierSystem:
         pass
 
     def run_one_cycle(self, old_action_set):
-        features = self.detector.get_encoded_features(self.environment)
+        features = self.detector.get_encoded_features()
         match_set = self.classifiers.get_match_set(features)
         highest_bidders = match_set.get_highest_bidders()
         action_set = highest_bidders.get_action_set()

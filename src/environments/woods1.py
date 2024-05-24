@@ -26,6 +26,14 @@ class Woods1(Environment):
     def set_current_position(self, starting_position):
         self.world[starting_position[0]][starting_position[1]] = '*'
 
+    def get_current_position(self):
+        # TODO Is this too inefficient?
+        for row in range(self.height):
+            for col in range(self.width):
+                if self.world[row][col] == '*':
+                    return [row, col]
+        return None
+
     def get_width(self):
         return self.width
 
